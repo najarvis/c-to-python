@@ -1,0 +1,3 @@
+gcc -c mid_dis.c
+gcc -shared -o mid_dis_dll.dll mid_dis.o -Wl,--add-stdcall-alias
+rm mid_dis.o
