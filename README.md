@@ -13,3 +13,6 @@ to compile the c code, you can just call:
 and to call the python code afterward:
 
 `python mid_dis.py`
+
+# Example
+![Example image the program spits out.](https://raw.githubusercontent.com/najarvis/c-to-python/master/mid_dis.png)
