@@ -6,7 +6,7 @@ import math
 pygame.init()
 
 # Detail level. Map will be (N ^ 2 + 1) x (N ^ 2 + 1).
-N = 9
+N = 8
 
 def get_func():
     # Load the dll file containing the function
@@ -85,7 +85,7 @@ def run():
     image. You can press SPACE to get a new map.
     """
 
-    width = int(N ** 2 + 1)
+    width = int(2 ** N + 1)
     screen_size = (width, width)
     screen = pygame.display.set_mode(screen_size)
 
