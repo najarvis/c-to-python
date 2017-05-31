@@ -85,7 +85,8 @@ def run():
     image. You can press SPACE to get a new map.
     """
 
-    screen_size = (513, 513)
+    width = int(N ** 2 + 1)
+    screen_size = (width, width)
     screen = pygame.display.set_mode(screen_size)
 
     surf = draw_map()
@@ -95,15 +96,18 @@ def run():
     while not done:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                # One can quit the program by clicking the X in the corner
                 done = True
                 break
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
+                    # One can quit by hitting the escape button also
                     done = True
                     break
 
                 if event.key == pygame.K_SPACE:
+                    # Pressing space creates a new map
                     surf = draw_map()
                     screen.blit(surf, (0, 0))
 
